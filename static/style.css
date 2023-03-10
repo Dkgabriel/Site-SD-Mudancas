@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'ubutu-bold';
+    src: url(../fonts/GoogleFonts-Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: 'ubutu-reg';
+    src: url(../fonts/GoogleFonts-Ubuntu-Regular.ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -42,6 +50,7 @@ nav ul li a{
     font-size: 25px;
     margin: 40px;
     transition: all 0.3s ease;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
 }
 nav ul li a.active,
 nav ul li a:hover{
@@ -112,12 +121,13 @@ nav .menu-btn i{
 }
 .titulo-home > h1{
     font-size: 90px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
 }
 .titulo-home > h2{
     font-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
     color: #1E7B5F;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.63);
 }
 .caixas-home{
     padding: 40px;
@@ -131,6 +141,8 @@ nav .menu-btn i{
     font-family: Arial, Helvetica, sans-serif;
     cursor:pointer;
     transition: transform 0.5s ease;
+    text-decoration: none;
+    font-family:  'ubutu-bold', Helvetica, sans-serif;
 
 }
 .caixas-home .cx-1:hover{
@@ -146,17 +158,19 @@ nav .menu-btn i{
     font-family: Arial, Helvetica, sans-serif;
     transition: transform 0.5s ease;
     cursor: pointer;
+    text-decoration: none;
+    font-family:  'ubutu-bold', Helvetica, sans-serif;
 }
 .caixas-home .cx2:hover{
     transform: scale(1.1);
     box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.479);
 }
 .rodape-main-home  p{
-    color: white;
+    color: black;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    text-shadow: 5px 5px 7px black;
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+    font-size: 35px;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.575);
 }
 @media (max-width: 920px){
     .titulo-home > h1{
@@ -194,10 +208,11 @@ nav .menu-btn i{
 }
 .header-sobre > h1{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
     text-align: center;
     padding: 20px;
     font-size: 80px;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.63);
 }
 .main-sobre{
     display: flex;
@@ -230,9 +245,11 @@ nav .menu-btn i{
 }
 
 .info-sobre > p {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
     color: white;
+    text-align: center;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.63);
 }
 @media (max-width: 920px){
     .header-sobre > h1{
@@ -254,30 +271,30 @@ nav .menu-btn i{
 /* serviços */
 .ns-servi-home{
     width: 100%;
-    height: 120vh;
-    border: 1px solid black;
+    height: 100vh;
 }
 .headar-servi{
     text-align: center;
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
     margin: 20px;
 }
 .cards-servi{
     display: flex;
 }
-
+/* card de serviços */
 .card{
     width: 400px;
-    height: 90vh;
+    height: 70vh;
     border: 1px solid black;
     margin: 20px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     color: white;
     background-color: #00704E;
     transition: transform 0.5s ease;
     text-decoration: none;
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.616);
+    cursor: pointer;
 }
 .card:hover{
     transform: scale(1.1);
@@ -304,10 +321,28 @@ nav .menu-btn i{
     background-position-y: -100px;
     background-repeat: no-repeat;
 }
+#img-card4{
+    background-image: url('/imgs/md-local.jpg');
+    background-size: cover;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+}
+#img-card5{
+    background-image: url('/imgs/montagem-desmontagem.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+}
+#img-card6{
+    background-image: url('/imgs/transporte-veiculo.jpeg.png');
+    background-size: cover;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+}
 .header-cd > h1 {
     padding: 10px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
     font-size: 30px;
 }
 .header-cd > hr{
@@ -317,24 +352,198 @@ nav .menu-btn i{
 }
 .main-cd{ 
     padding: 13px;
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+    font-size: 24px;
+}
+/* serviços */
+.main-servico{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.caixas-serv{
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.coluna-1{
+    display: flex;
+}
+.coluna-2{
+    display: flex;
+}
+.coluna-3{
+    display: flex;
+}
+/* dicas */
+.main-dicas{
+    background-color: #00704E;
+    width: 100%;
+    height: 130vh;
+}
+.header-dicas{
+    padding: 30px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.63);
+
+}
+.caixas-dicas{
+    display: flex;
+    flex-direction: column;
+}
+.coluna-1-dc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.coluna-2-dc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.cx-dica-1  h1{
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
+}
+.cx-dica-1  p{
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+}
+.cx-dica-1{
+    width: 600px;
+    height: 40vh;
+    background-color: white;
+    padding: 30px;
+    border-radius: 0px 10px 10px 0px;
+}
+.cx-dica-2{
+    height: 40vh;
+    color: white;
+    width: 600px;
+    background-color: black;
+    padding: 30px;
+    border-radius: 10px 0px 0px 10px;
+}
+.cx-dica-2  h1{
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
+}
+.cx-dica-2  p{
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+}
+.header-dica-cx{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.main-cx-dica{
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+/* contato */
+.main-contato{
+    width: 100%;
+}
+.header-contato{
+    background-color: #1E7B5F;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 23px;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.685);
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.24);
+
+}
+.header-contato > h1{
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
+}
+.header-contato > p{
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+}
+.contatos-info{
+    width: 100%;
+    height: 40vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 19px;
+    display: flex;
+    justify-content: center;
 }
-@media (max-width: 920px){
-    .cards-servi{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 300vh;
-        border: 1px solid black;
-    }
-    .card{
-        margin: auto;
-    }
-    footer{
-        
-    }
+.contatos-info  h1{
+    font-size: 60px;
+    margin: 30px;
+    font-family: 'ubutu-bold', Helvetica, sans-serif;
+
 }
+.contatos-info p {
+    font-size: 40px;
+    margin: 60px;
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+
+}
+.solicitar-orcamento{
+    background-color: #00704E;
+    padding: 50px;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 50px;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.685);
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.24);
+}
+.main-sl-orcamento{
+    display: flex;
+    justify-content: space-around;
+}
+.sl-orc-bt > h1{
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.sl-orc-bt > button {
+    width: 70%;
+    height: 10vh;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.sl-orc-bt > button:hover{
+    background-color: #009b6c;
+    color: white;
+}
+.sl-orc-bt > button:active{
+    transform: translateY(4px);
+    box-shadow: 0px 5px 0px rgba(255, 255, 255, 0.226);
+    background-color: #009b6c;
+    color: white;
+}
+.inputs-sl-orcamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inputs-sl-orcamento  input{
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 200px;
+
+}
+.inputs-sl-orcamento  input::placeholder{
+    color: gray;
+}
+#mesagem{
+    width: 415px;
+}
+/* rodape */
 .fotter-cd > img{
     width: 50px;
     margin-top: 10px;
@@ -346,10 +555,9 @@ footer{
     display: flex;
     width: 100%;
     height: 60vh;
-    border: 1px solid black;
 }
 .logo-foter{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.541);
     width: 100%;
 }
 .logo-foter img{
@@ -357,7 +565,7 @@ footer{
     width: 500px;
 }
 .contato-foter{
-    background-color: #00704E;
+    background-color: #1E7B5F;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -365,7 +573,9 @@ footer{
     align-items: center;
     color: white;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubutu-reg', Helvetica, sans-serif;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.24);
+
 }
 .contato-foter > p{
     margin: 10px;
